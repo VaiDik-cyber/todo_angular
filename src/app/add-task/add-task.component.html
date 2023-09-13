@@ -1,0 +1,12 @@
+<!-- <p>add-task works!</p> -->
+<input type="text" placeholder="Add Some Task" #task />
+<br />
+<br />
+<button (click)="addTask(task.value)">Add Task</button>
+<br /><br />
+<ul *ngFor="let item of list">
+  <li>
+    {{ item.task }}
+    <button (click)="removeItem(item.id)">Remove</button>
+  </li>
+</ul>
